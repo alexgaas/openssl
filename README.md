@@ -2,13 +2,13 @@
 
 C++ **OpenSSL** thin wrapper I use for all my cryptography experiments and **identity** servers / frameworks.
 
-**v1 version**:
+[**v1 version**](https://github.com/alexgaas/openssl/tree/v1_release):
 - basic initialization / uninitialization of OpenSSL
 - POCO Crypto constructs (_EVPPKey_ as example) exposed for crypto-based operations
 - SHA1 / digest as example to call constructs
 - basic unit tests
 
-**v2 version**:
+[**v2 version**](https://github.com/alexgaas/openssl/tree/v2_release):
 - introduces Holder class to effectively initialize OpenSSL constructs
 - RSA added as example of using holder class
 - additional unit tests added for RSA  
