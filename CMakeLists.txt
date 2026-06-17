@@ -27,25 +27,37 @@ add_library(openssl
         src/util/base64.h
         src/util/types.cpp
         src/util/types.h
-)
+        src/holders/holder.h
+        src/holders/hmac.h
+        src/crypto/rsa.h
+        src/crypto/rsa.cpp
+        src/holders/rsa.h
+        src/holders/bn.h
+        src/big_integer/big_integer.h
+        src/big_integer/big_integer.cpp
+        )
 
-target_link_libraries(openssl PUBLIC 
+        target_link_libraries(openssl PUBLIC 
         OpenSSL::Crypto
         Poco::Crypto
         Poco::Util
         Poco::Foundation
-)
+        )
 
-target_include_directories(openssl PUBLIC
+        target_include_directories(openssl PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/src
-)
+        )
 
-enable_testing()
+        enable_testing()
 
-add_executable(openssl_tests
+        add_executable(openssl_tests
         src/crypto/ut/digest_ut.cpp
+        src/crypto/ut/rsa_ut.cpp
         src/tools/ut/tools_ut.cpp
         src/util/ut/base64_ut.cpp
+        src/holders/ut/hmac_ut.cpp
+        src/holders/ut/bn_ut.cpp
+        src/big_integer/ut/big_integer_ut.cpp
 )
 
 target_link_libraries(openssl_tests PRIVATE

@@ -8,6 +8,11 @@ C++ **OpenSSL** thin wrapper I use for all my cryptography experiments and **ide
 - SHA1 / digest as example to call constructs
 - basic unit tests
 
+**v2 version**:
+- introduces Holder class to effectively initialize OpenSSL constructs
+- RSA added as example of using holder class
+- additional unit tests added for RSA  
+
 ### Prerequisites
 
 - CMake 3.10+
